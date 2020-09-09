@@ -1,18 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>trainingFrontend</title>
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./form/form.css">
 </head>
+
 <body>
+<header>
+        <div class="logo">Никита</div>
+        <div class="nav__links">
+            <a href="" class="nav__link form">форма</a>
+            <a href="" class="nav__link">link2</a>
+            <a href="" class="nav__link">link3</a>
+            <a href="" class="nav__link">link4</a>
+            <a href="" class="nav__link">link5</a>
+        </div>
+</header>
+<div class="content">
     <h1>Мой тренировочный проект</h1>
+    <div class="form__overlay">
+        <div class="form__wrapper">
+            <h2>Заказать забор</h2>
+            <form action="post">
+                <span>Длина забора</span>
+                <input placeholder="0" type="number" name="fence-length" id="fence-length">
+                <span>метров</span>
+                <span>Высота забора</span>
+                <input placeholder="0" type="number" name="fence-height" id="fence-height">
+                <span>метров</span>
+                <span>Материал забора</span>
+                <div class="select-menu">
+                    <div class="selected">Профнастил 400 Р за м2</div>
+                    <div class="select-menu__dropdown">
+                        <div class="select">
+                            <input type="radio" name="material" id="400">
+                            Профнастил 400 Р за м2
+                        </div>
+                        <div class="select">
+                            <input type="radio" name="material" id="500">
+                            Модули 500 Р за м2
+                        </div>
+                        <div class="select">
+                            <input type="radio" name="material" id="700">
+                            Бетон 700 Р за м2
+                        </div>
+                        <div class="select">
+                            <input type="radio" name="material" id="200">
+                            Сетка 200 Р за м2
+                        </div>
+                    </div>
+                </div>
+                <input class='montage' type="checkbox" name="montage" id="montage">
+                <label for="montage">Нужен монтаж</label>
+                <p>Сумма заказа: <span>0 ₽</span></p>
+                <button>ДАЛЕЕ</button>
+            </form>
+        </div>
+    </div></div>
+<footer>
 
-
+</footer>
 
 
 
     <script src="./main.js"></script>
 </body>
+
 </html>
