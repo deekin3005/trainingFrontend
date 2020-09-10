@@ -1,1 +1,1 @@
-# trainingFrontend
+Просто тренируюсь в HTML CSS JS
