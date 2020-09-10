@@ -6,9 +6,11 @@
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+}
+.form__overlay.active {
 }
 .form__wrapper {
     background-color: #fff;
@@ -207,6 +209,10 @@ input[type="number"]::-webkit-outer-spin-button {
     opacity: 0;
     transition: all 0.3s;
 }
+.select-menu__dropdown.active {
+    display: block;
+    opacity: 1;
+}
 .select {
     overflow: hidden;
     cursor: pointer;
@@ -265,4 +271,7 @@ form button:after {
     top: 7px;
     right: -16px;
     background: #818387;
+}
+form button:hover, form button:hover::after {
+    background: #3789EC;
 }
