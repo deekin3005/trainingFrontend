@@ -33,6 +33,13 @@ header {
 .nav__link:hover {
     color: tan;
 }
+h1 {
+    margin: 2rem;
+}
+section {
+    width: 90%;
+    text-align: center;
+}
 .bg-button {
     cursor: pointer;
     margin: 2rem;
