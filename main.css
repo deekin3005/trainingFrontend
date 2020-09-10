@@ -36,10 +36,15 @@ header {
 h1 {
     margin: 2rem;
 }
-section {
-    width: 90%;
+.color-play {
+    width: 100%;
     text-align: center;
     display: flex;
+}
+@media (max-width:729px) {
+    .color-play {
+        flex-direction: column;
+    }
 }
 .rgb-block, .hex-block {
 min-width: 50%;
@@ -61,4 +66,7 @@ border: 2px solid;
 }
 .rgb-button:hover, .hex-button:hover {
     background: rgba(0,0,0,0.5);
+}
+.color-play h2 {
+    text-shadow: 1px 1px 1px #000;
 }
