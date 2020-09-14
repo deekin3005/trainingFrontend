@@ -38,3 +38,18 @@ function hexColorChange(){
 hexNumbers.innerHTML = hex;
 hexBlock.style.backgroundColor = hex;
 }
+
+//form popup
+
+const formOpenButton = document.querySelector('.formOpenButton');
+const formWindow = document.querySelector('.form__wrapper');
+const formCloseButton = document.querySelector('.form__close-button');
+
+formOpenButton.addEventListener('click', function(event){
+    event.preventDefault();
+    formWindow.classList.add('opened')
+})
+formCloseButton.addEventListener('click', function(event){
+    event.preventDefault();
+    formWindow.classList.remove('opened')
+})
