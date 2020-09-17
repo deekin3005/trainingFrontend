@@ -41,8 +41,8 @@ hexBlock.style.backgroundColor = hex;
 
 //form popup
 
-const formOpenButton = document.querySelector('.formOpenButton');
-const formWindow = document.querySelector('.form__wrapper');
+const formOpenButton = document.querySelector('.form-open-button');
+const formWindow = document.querySelector('.form__overlay');
 const formCloseButton = document.querySelector('.form__close-button');
 
 formOpenButton.addEventListener('click', function(event){

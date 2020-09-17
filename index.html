@@ -17,7 +17,7 @@
             <a href="" class="nav__link">link2</a>
             <a href="" class="nav__link">link3</a>
             <a href="" class="nav__link">link4</a>
-            <a href="" class="nav__link formOpenButton">Форма</a>
+            <a href="" class="nav__link form-open-button">Форма</a>
         </div>
 </header>
     <div class="hero">
@@ -40,9 +40,26 @@
 <footer>
 
 </footer>
-<div class="form__wrapper">
+<div class="form__overlay">
     <div class="form__body">
+        <h2>Заказать забор</h2>
         <a href="" class="form__close-button">Close</a>
+        <div class="form__wrapper">
+            <p>Длина забора</p>
+            <input type="number" name="fence-length" id="fence-length" class="fence-length" placeholder="0">
+            <span>метров</span>
+            <p>Высота забора</p>
+            <input type="number" name="fence-height" id="fence-height" class="fence-height" placeholder="0">
+            <span>метров</span>
+            <p>Материал забора</p>
+            <div class="material-select">
+                
+            </div>
+            <input type="checkbox" name="montage" id="montage">
+            <label for="montage">Нужен монтаж</label>
+            <p class="sum">Сумма заказа: <span class="sum-counted">0 ₽</span></p>
+            <a href="" class="next-button">ДАЛЕЕ</a>
+        </div>
     </div>
 </div>
 
