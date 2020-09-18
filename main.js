@@ -53,3 +53,30 @@ formCloseButton.addEventListener('click', function(event){
     event.preventDefault();
     formWindow.classList.remove('opened')
 })
+
+//Troll popup
+
+const trollOverlay = document.querySelector('.troll__overlay')
+const trollOpenButton = document.querySelector('.troll-open-button');
+const trollCloseButton = document.querySelector('.troll__close-button');
+const trollActivateButton = document.querySelector('.troll__button');
+const trollSays = document.querySelector('.troll__says');
+
+const trollWord1 = ['вонючая','тупая','гнусная','долбаная','чмошная','дерьмовая'];
+const trollWord2 = ['псина','какашка','кочерышка','гнида','сволочь','макака'];
+
+trollOpenButton.addEventListener('click', function(event){
+    event.preventDefault();
+    trollOverlay.classList.add('opened');
+})
+trollCloseButton.addEventListener('click', function(event){
+    event.preventDefault();
+    trollOverlay.classList.remove('opened')
+})
+
+trollActivateButton.addEventListener('click', function(trollFunction){
+    trollFunction.preventDefault();
+    let a = Math.floor(Math.random()*trollWord1.length);
+    let b = Math.floor(Math.random()*trollWord2.length);
+    trollSays.innerHTML = 'Ну ты ' + trollWord1[a] + ' ' + trollWord2[b] + '!';
+})
