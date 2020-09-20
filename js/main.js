@@ -80,3 +80,46 @@ trollActivateButton.addEventListener('click', function(trollFunction){
     let b = Math.floor(Math.random()*trollWord2.length);
     trollSays.innerHTML = 'Ну ты ' + trollWord1[a] + ' ' + trollWord2[b] + '!';
 })
+
+// Hangman game
+
+const hangmanStartButton = document.querySelector('.hangman__start-button');
+const hangmanInput = document.querySelector('.hangman__input');
+const hangmanOutput = document.querySelector('.hangman__output');
+const hangmanButton = document.querySelector('.hangman__button');
+
+const hangmanWords = ['велосипедист','самосвал','электромобиль','аквамарин',]
+
+hangmanStartButton.addEventListener('click', hangmanStartGame)
+
+function hangmanStartGame() {
+    let hangmanWord = hangmanWords[Math.floor(Math.random()*hangmanWords.length)];
+    for(i=0; i<hangmanWord.length; i++){
+        hangmanOutput.innerHTML += '_'
+    }
+}
+
+let fenceLength = 0,
+fenceHeight = 0,
+montage = 1;
+
+// FORM working process
+
+$('#fence-length').on('keyup', function(){
+    fenceLength = $(this).val();
+    $('.sum-counted').text(fenceLength * fenceHeight * montage);
+})
+$('#fence-height').on('keyup', function(){
+    fenceHeight = $(this).val();
+    $('.sum-counted').text(fenceLength * fenceHeight * montage);
+})
+
+$('#montage').on('click', function(){
+    if ($(this).is(':checked')){
+        montage = 1.4;
+        $('.sum-counted').text(fenceLength * fenceHeight * montage);
+    } else {
+        montage = 1;
+        $('.sum-counted').text(fenceLength * fenceHeight * montage);
+    }
+})
