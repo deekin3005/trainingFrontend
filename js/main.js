@@ -99,11 +99,11 @@ function hangmanStartGame() {
     }
 }
 
+// FORM working process
+
 let fenceLength = 0,
 fenceHeight = 0,
 montage = 1;
-
-// FORM working process
 
 $('#fence-length').on('keyup', function(){
     fenceLength = $(this).val();
